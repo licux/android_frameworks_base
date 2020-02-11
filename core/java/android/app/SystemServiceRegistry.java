@@ -897,6 +897,13 @@ final class SystemServiceRegistry {
             public RulesManager createService(ContextImpl ctx) {
                 return new RulesManager(ctx.getOuterContext());
             }});
+
+        registerService(Context.THEME_SERVICE, ThemeManager.class,
+                new CachedServiceFetcher<ThemeManager>() {
+            @Override
+            public ThemeManager createService(ContextImpl ctx) throws ServiceNotFoundException {
+                return new ThemeManager();
+            }});
     }
 
     /**

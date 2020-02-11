@@ -2992,7 +2992,8 @@ public abstract class Context {
             //@hide: CONTEXTHUB_SERVICE,
             SYSTEM_HEALTH_SERVICE,
             //@hide: INCIDENT_SERVICE,
-            COMPANION_DEVICE_SERVICE
+            COMPANION_DEVICE_SERVICE,
+            THEME_SERVICE,
     })
     @Retention(RetentionPolicy.SOURCE)
     public @interface ServiceName {}
@@ -4048,6 +4049,8 @@ public abstract class Context {
      * @see #getSystemService
      */
     public static final String TIME_ZONE_RULES_MANAGER_SERVICE = "timezone";
+
+    public static final String THEME_SERVICE = "theme";
 
     /**
      * Determine whether the given permission is allowed for a particular
